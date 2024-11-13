@@ -1,0 +1,407 @@
+/*! base css start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow: hidden;
+}
+/*! base css end */
+
+/*! navbar start */
+.navbar {
+    background-color: black;
+    height: 60px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(255, 70, 70);
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-list-item {
+    cursor: pointer;
+    transition: font-weight 0.3s;
+}
+
+.menu-list-item:hover, .menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.toggle {
+    width: 40px;
+    background-color: white;
+    height: 20px;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    transition: right 0.3s;
+}
+/*! navbar end */
+
+/*! sidebar start */
+.sidebar {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar i:hover {
+    color: rgb(255, 70, 70);
+}
+/*! sidebar end */
+
+/*! content start */
+.content-wrapper {
+    margin-left: 60px;
+    padding-top: 60px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.featured-content {
+    background: url("img/OIP (1).jpg") no-repeat center center;
+    background-size: cover;
+    padding: 50px;
+    min-height: calc(100vh - 60px);
+    color: white;
+    position: relative;
+}
+/*! content end */
+
+/* Film Kartları Konteyneri */
+.film-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.film-card {
+    background-color: #222;
+    border-radius: 8px;
+    width: 200px;
+    flex-shrink: 0;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.film-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.watch-btn,
+.info-btn {
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.watch-btn:hover,
+.info-btn:hover {
+    background-color: #444;
+}
+
+/*! Popüler Film Listesi */
+.movie-list-container {
+    margin-left: 70px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.movie-list {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-list img {
+    width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.movie-list img:hover {
+    transform: scale(1.05);
+}
+
+/* Kaydırma Oku */
+.arrow {
+    display: flex;
+    font-size: 3rem;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+/* Sidebar arama butonunu hizalama ve stil iyileştirme */
+.sidebar {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    transition: width 0.3s; /* Hover genişlemesi için geçiş */
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Arama simgesi için özel düzenleme */
+.sidebar i:first-child {
+    font-size: 24px; /* Arama simgesini biraz daha büyük yap */
+    margin-bottom: 20px; /* Üst kısımdan boşluk bırak */
+}
+
+.sidebar i:hover {
+    color: rgb(255, 70, 70);
+    transform: scale(1.1); /* Hover durumunda büyütme */
+}
+/* Sidebar ayarları */
+.sidebar {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Sidebar'ı üstte tut */
+    transition: width 0.3s ease; /* Hover genişlemesi için geçiş */
+    overflow: visible; /* İçeriğin tam olarak görünmesi için ayarlandı */
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    pointer-events: auto; /* Tıklanabilirlik ayarı */
+}
+
+/* Arama simgesi için özel düzenleme */
+.sidebar i:first-child {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar i:hover {
+    color: rgb(255, 70, 70);
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .navbar-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar {
+        width: 50px;
+    }
+
+    .content-wrapper {
+        margin-left: 50px;
+        padding-top: 20px;
+    }
+
+    .film-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.watch-btn:hover,
+.info-btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+.film-card {
+    background-color: #222;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.film-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.film-card img[src=""] {
+    content: url('placeholder.jpg');
+}
+/* Responsive navbar */
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-list-item {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Film Kartları Düzenlemesi */
+.film-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive düzen için medya sorgusu */
+@media (max-width: 768px) {
+    .navbar-wrapper, .sidebar, .content-wrapper {
+        flex-direction: column;
+    }
+
+    .film-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-container ul {
+        flex-direction: column;
+    }
+}
